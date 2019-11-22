@@ -135,16 +135,39 @@ html {
 }
 html,
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+p {
+  color: #0D0D0D;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+a {
+  color: #0D0D0D;
+}
+a:hover,
+a active,
+a visited {
+  color: #0D0D0D;
 }
 nav {
   width: 100%;
   margin: 0 auto;
   padding: 11px 20px 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
@@ -152,39 +175,80 @@ nav {
 nav h2 {
   font-size: 2rem;
 }
-nav h2 sup {
-  vertical-align: super;
-  font-size: smaller;
-}
-nav a {
-  font-size: 1.5rem;
-  padding: 5px;
-}
-nav a:visited {
-  color: #0D0D0D;
-}
-nav a:hover {
-  color: white;
+nav .logo {
+  display: flex;
+  justify-content: left;
 }
 nav .nav-links {
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
+  display: none;
+}
+@media (min-width: 768px) {
+  nav {
+    padding: 11px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  }
+  nav h2 {
+    font-size: 2rem;
+  }
+  nav a {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+  nav a:visited {
+    color: #0D0D0D;
+  }
+  nav a:hover {
+    color: white;
+  }
+  nav .nav-links {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 footer {
   width: 100%;
   color: white;
-  background: #A7CFF2;
+  background: #3C4C59;
   padding: 20px 0;
+}
+footer span {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-footer p {
+footer span p {
   font-size: 1rem;
 }
-.home header img {
-  width: 100%;
-  height: 100vh;
+footer span img {
+  height: 20px;
   object-fit: cover;
+}
+.home header {
+  height: 100vh;
+  background-image: url(../img/mountain-alps.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.home header .container {
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home header .container .frosted-box {
+  padding: 20px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.8) 25%, rgba(255, 255, 255, 0.8) 75%, rgba(255, 255, 255, 0.6) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  border-radius: 2%;
 }
