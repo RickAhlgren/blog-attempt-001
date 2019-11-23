@@ -259,7 +259,7 @@ footer span img {
   font-size: 1.6rem;
 }
 .home header .container .transparent-box:hover {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 25%, rgba(255, 255, 255, 0.8) 75%, rgba(255, 255, 255, 0.8) 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0.9) 100%);
 }
 @media (min-width: 500px) {
   .home header .container .transparent-box {
