@@ -341,7 +341,7 @@ footer span img {
     display: none;
   }
   .home .exploration .topics-container {
-    margin-top: 50px;
+    margin: 50px 0 50px;
     width: 100%;
     justify-content: space-around;
     align-items: flex-start;
@@ -372,17 +372,25 @@ footer span img {
   justify-content: center;
   align-items: center;
   height: 50px;
-  background-color: #D0E9F2;
+  background: linear-gradient(90deg, rgba(208, 233, 242, 0.3) 0%, rgba(208, 233, 242, 0.5) 25%, rgba(208, 233, 242, 0.5) 75%, rgba(208, 233, 242, 0.3) 100%);
+  border-left: 2px solid #D0E9F2;
+  border-top: 2px solid #D0E9F2;
+  border-right: 2px solid #D0E9F2;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  box-shadow: 0 0 25px rgba(167, 207, 242, 0.5);
 }
 .home .work-container .project-description {
   margin: 0 auto;
   width: 90%;
   padding: 10px;
-  background-color: #D0E9F2;
+  background: linear-gradient(90deg, rgba(208, 233, 242, 0.3) 0%, rgba(208, 233, 242, 0.5) 25%, rgba(208, 233, 242, 0.5) 75%, rgba(208, 233, 242, 0.3) 100%);
+  border-left: 2px solid #D0E9F2;
+  border-bottom: 2px solid #D0E9F2;
+  border-right: 2px solid #D0E9F2;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  box-shadow: 0 0 25px rgba(167, 207, 242, 0.5);
 }
 .home .work-container .project-image {
   background-color: #D0E9F2;
@@ -390,9 +398,7 @@ footer span img {
 .home .work-container img {
   width: 100%;
   cursor: pointer;
-}
-.home .work-container img:active {
-  border: 2px solid white;
+  border-top: 2px solid #D0E9F2;
 }
 .home .work-container span {
   width: 100%;
