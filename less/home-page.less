@@ -57,6 +57,7 @@
     }
   }
 
+  // Here is the code for the section containing links to my (mis)Adventures, Work, Meditations, and Status Updates
   .exploration {
     display: flex;
     flex-direction: column;
@@ -114,11 +115,6 @@
             color: @blue;
 
             &:hover {
-              background: radial-gradient(
-                closest-side,
-                rgba(255, 255, 255, 0.2),
-                black
-              );
               color: white;
             }
           }
@@ -164,6 +160,46 @@
     }
   }
 
+  .about-me-brief {
+    margin-top: 80px;
+
+    .about-container {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .bio-box {
+      padding: 30px 0;
+      border-bottom: 1px solid @grey;
+    }
+
+
+    h2 {
+      text-align: center;
+    }
+
+    i {
+      text-align: center;
+      width: 30px;
+    }
+
+    @media @SD-display {
+      .about-container {
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid @grey;
+        div {
+          width: 48%;
+        }
+
+        .bio-box {
+          border: none;
+        }
+      }
+    }
+  }
+
+  // Here is the code for the portfolio section containing recent work
   .portfolio-container {
     margin-top: 100px;
 
@@ -181,24 +217,24 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      border-left: 2px solid @lightblue;
-      border-top: 2px solid @lightblue;
-      border-right: 2px solid @lightblue;
+      border-left: 1px solid @lightblue;
+      border-top: 1px solid @lightblue;
+      border-right: 1px solid @lightblue;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
-      box-shadow: 0 0 25px rgba(rgb(167, 207, 242), 0.5);
+      box-shadow: 0 0 25px rgba(rgb(167, 207, 242), 0.3);
     }
 
     .project-description {
       margin: 0 auto;
       width: 90%;
       padding: 10px;
-      border-left: 2px solid @lightblue;
-      border-bottom: 2px solid @lightblue;
-      border-right: 2px solid @lightblue;
+      border-left: 1px solid @lightblue;
+      border-bottom: 1px solid @lightblue;
+      border-right: 1px solid @lightblue;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
-      box-shadow: 0 0 25px rgba(rgb(167, 207, 242), 0.5);
+      box-shadow: 0 0 25px rgba(rgb(167, 207, 242), 0.3);
 
       h4 {
         display: none;
@@ -227,10 +263,16 @@
 
       i {
         color: @darkgrey;
+        &:hover {
+          color: @grey;
+        }
       }
     }
 
     @media @tablet {
+      width: 90%;
+      margin: 0 auto;
+
       .portfolio-piece {
         display: flex;
         margin-bottom: 80px;
@@ -274,15 +316,28 @@
     }
 
     @media @HD-display {
-      width: 90%;
-      margin: 0 auto;
+      width: 70%;
+      margin: 125px auto;
+
+      .recent-work-title {
+        h2 {
+          font-size: 5rem;
+        }
+      }
       .portfolio-piece {
         .project-image {
           width: 40%;
-          // img {
-          //   width: 70%;
-          // }
         }
+
+        // h4 {
+        //   font-size: 4rem;
+        //   line-height: 6rem;
+        // }
+
+        // p {
+        //   font-size: 2.5rem;
+        //   line-height: 3.5rem;
+        // }
       }
     }
   }
