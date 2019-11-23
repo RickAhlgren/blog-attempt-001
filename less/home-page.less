@@ -19,17 +19,17 @@
         padding: 20px;
         background: linear-gradient(
           90deg,
-          rgba(255, 255, 255, 0.5) 0%,
+          rgba(255, 255, 255, 0.6) 0%,
           rgba(255, 255, 255, 0.8) 25%,
           rgba(255, 255, 255, 0.8) 75%,
-          rgba(255, 255, 255, 0.5) 100%
+          rgba(255, 255, 255, 0.6) 100%
         );
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
           inset 0 0 1px rgba(255, 255, 255, 0.6);
-        border-radius: 2px;
+        border-radius: 3px;
 
-        @media @SD-screen {
-          width: 60%;
+        p {
+          font-size: 1.6rem;
         }
 
         &:hover {
@@ -41,12 +41,24 @@
             rgba(255, 255, 255, 0.8) 100%
           );
         }
+
+        @media @tablet {
+          width: 80%;
+          p {
+            font-size: 2rem;
+            line-height: 2.8rem;
+          }
+        }
+
+        @media @HD-display {
+          width: 60%;
+        }
       }
     }
   }
 
   .exploration {
-    max-width: 100%;
+    // max-width: 100%;
     display: flex;
     flex-direction: column;
     background-color: black;
@@ -64,16 +76,69 @@
       .topic-text-container {
         text-align: left;
         width: 60%;
+        p {
+          color: @lightblue;
+        }
       }
 
       .icon-container {
         width: 30%;
       }
+
+      a {
+        color: @lightblue;
+
+        &:active {
+          color: white;
+          background: radial-gradient(
+            closest-side,
+            rgba(255, 255, 255, 0.1),
+            black
+          );
+        }
+      }
     }
 
-    
+    @media @tablet {
+      .topics-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
 
-    @media @SD-screen {
+        .individual-topic {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+
+          a {
+            color: @blue;
+
+            &:hover {
+              background: radial-gradient(
+                closest-side,
+                rgba(255, 255, 255, 0.2),
+                black
+              );
+              color: white;
+            }
+          }
+
+          .icon-container {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+          }
+
+          .topic-text-container {
+            width: 80%;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    @media @HD-display {
       .explore-text-container {
         display: none;
       }
@@ -81,43 +146,75 @@
       .topics-container {
         margin-top: 50px;
         width: 100%;
-        display: flex;
         justify-content: space-around;
         align-items: flex-start;
 
         .individual-topic {
           display: flex;
           flex-direction: column;
-          width: 20%;
+          width: 24%;
           padding: 0;
 
-          .status {
-            margin-left: 20px;
-          }
-
           .icon-container {
-            width: 100%;
-            height: auto;
             display: flex;
             justify-content: center;
-            margin-bottom: 15px;
             cursor: pointer;
           }
-
-          a {
-            color: @lightblue;
-
-            &:hover {
-              background: radial-gradient(closest-side, rgba(255, 255, 255, 0.1), black);
-              color: white;
-            }
-          }
-
-          .topic-text-container {
-            width: 100%;
-            text-align: center;
-          }
         }
+      }
+    }
+  }
+
+  .work-container {
+    margin-top: 100px;
+
+
+    .recent-work-title {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .project-title {
+      margin: 0 auto;
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      background-color: @lightblue;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .project-description {
+      margin: 0 auto;
+      width: 90%;
+      padding: 10px;
+      background-color: @lightblue;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    .project-image {
+      background-color: @lightblue;
+    }
+
+    img {
+      width: 100%;
+      cursor: pointer;
+      &:active {
+        border: 2px solid white;
+      }
+    }
+
+    span {
+      width: 100%;
+      padding: 30px 0;
+      display: flex;
+      justify-content: space-around;
+
+      i {
+        color: @darkgrey;
       }
     }
   }

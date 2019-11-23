@@ -46,14 +46,14 @@
         <div class="container">
           <div class="transparent-box">
             <h1 style="text-align:center">Welcome</h1>
-            <br /><br />
+            <br /><br /><br />
             <p>
               You've stumbled upon the website of a simple human just biding his
               time in this world until he can transfer his consciousness into a
               machine and explore the stars for eternity.
             </p>
-            <br /><br />
-            <p style="text-align:center">
+            <br /><br /><br />
+            <p style="text-align:right">
               Scroll down if you want to know more.
             </p>
           </div>
@@ -62,17 +62,18 @@
         <!-- this closes the container div -->
       </header>
 
-      <div class="exploration">
+      <section class="exploration">
         <div class="explore-text-container">
           <h1>Explore</h1>
           <br />
         </div>
         <!-- this closes the div containing Explore -->
         <div class="topics-container">
-          <div class="individual-topic misadventures">
+          <div class="individual-topic misadventures-topic">
             <div class="icon-container">
-                <a href="#"><i class="fas fa-book fa-7x"></i></a>
+              <a href="#"><i class="fas fa-book fa-7x"></i></a>
             </div>
+            <!-- this closes the icon-container div -->
             <div class="topic-text-container">
               <h3>(mis)ADVENTURES</h3>
               <br />
@@ -80,39 +81,44 @@
                 Life lessons present but not guaranteed.
               </p>
             </div>
+            <!-- this closes the topic-text-container div -->
           </div>
           <!-- this closes the individual-topic div containing (mis)adventures -->
           <br />
 
           <div class="individual-topic">
-            <div class="icon-container work">
-                <a href="#"><i class="fas fa-code fa-7x"></i></a>
+            <div class="icon-container work-topic">
+              <a href="#"><i class="fas fa-code fa-7x"></i></a>
             </div>
+            <!-- this closes the icon-container div -->
             <div class="topic-text-container">
               <h3>WORK</h3>
               <br />
               <p>Things I've created with my manicured hands.</p>
             </div>
+            <!-- this closes the topic-text-container div -->
           </div>
           <!-- this closes the individual-topic div containing work -->
           <br />
 
           <div class="individual-topic">
-            <div class="icon-container meditations">
-                <a href="#"><i class="far fa-comment-dots fa-7x"></i></a>
+            <div class="icon-container meditations-topic">
+              <a href="#"><i class="far fa-comment-dots fa-7x"></i></a>
             </div>
+            <!-- this closes the icon-container div -->
             <div class="topic-text-container">
               <h3>MEDITATIONS</h3>
               <br />
               <p>Naive thoughts on life and existence.</p>
             </div>
+            <!-- this closes the topic-text-container div -->
           </div>
           <!-- this closes the individual-topic div containing meditations -->
           <br />
 
           <div class="individual-topic">
-            <div class="icon-container status">
-              <a href="#"><i class="fas fa-user-edit fa-7x"></i></a>
+            <div class="icon-container status-topic">
+              <a href="#"><i class="fas fa-user fa-7x"></i></a>
             </div>
             <div class="topic-text-container">
               <h3>STATUS UPDATES</h3>
@@ -126,8 +132,86 @@
           <br />
         </div>
         <!-- this closes the topics-container div -->
-      </div>
-      <!-- this closes the exploration div -->
+      </section>
+      <!-- this closes the exploration section -->
+
+      <section class="work-container">
+        <div class="recent-work-title">
+          <h2>Recent Work</h2>
+        </div>
+
+        <!-- this starts a new portfolio highlight -->
+        <div class="portfolio">
+          <div class="project-title">
+            <h4>Second Chance</h4>
+          </div>
+          <div class="project-image">
+            <a href="https://bw1-secondchance.netlify.com/"
+              ><img src="img/second-chance.png"
+            /></a>
+          </div>
+          <div class="project-description">
+            <p>
+              In a country where the prison system acts as a graduate school for
+              criminals to become better criminals, we set out to build a
+              platform to remove the stigma associated with employing inmates
+              (current and former) and match them with employers who agree that
+              everyone deserves a Second Chance.
+            </p>
+            <span>
+              <a
+                class="github-button"
+                href="https://github.com/thericktastic/PS-UI/tree/rick-ahlgren"
+                ><i class="fab fa-github fa-6x"></i
+              ></a>
+              <a
+                class="github-button"
+                href="https://bw1-secondchance.netlify.com/"
+                ><i class="fas fa-link fa-6x"></i
+              ></a>
+            </span>
+            <!-- this closes the span containing the buttons -->
+          </div>
+          <!-- this closes the project-description div -->
+        </div>
+        <!-- this closes the portfolio-top div -->
+        <br /><br /><br />
+
+
+        <!-- this starts a new portfolio highlight -->
+        <div class="portfolio">
+            <div class="project-title">
+              <h4>Space Walkers</h4>
+            </div>
+            <div class="project-image">
+              <a href="https://thericktastic.github.io/Sprint-Challenge--Advanced-CSS/"
+                ><img src="img/space-walkers.png"
+              /></a>
+            </div>
+            <div class="project-description">
+              <p>
+                In our second week at Lambda School we were tasked with adding all of the styling to a basic HTML framework, using LESS as a preprocessor, and making the site mobile responsive.
+              </p>
+              <span>
+                <a
+                  class="github-button"
+                  href="https://github.com/thericktastic/Sprint-Challenge--Advanced-CSS/tree/rick-ahlgren"
+                  ><i class="fab fa-github fa-6x"></i
+                ></a>
+                <a
+                  class="github-button"
+                  href="https://thericktastic.github.io/Sprint-Challenge--Advanced-CSS/"
+                  ><i class="fas fa-link fa-6x"></i
+                ></a>
+              </span>
+              <!-- this closes the span containing the buttons -->
+            </div>
+            <!-- this closes the project-description div -->
+          </div>
+          <!-- this closes the portfolio-top div -->
+      </section>
+
+      <section class="status-update-container"></section>
     </div>
     <!-- this closes the home div -->
     <footer>
