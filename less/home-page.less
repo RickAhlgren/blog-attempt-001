@@ -19,14 +19,28 @@
         padding: 20px;
         background: linear-gradient(
           90deg,
-          rgba(255, 255, 255, 0.6) 0%,
+          rgba(255, 255, 255, 0.5) 0%,
           rgba(255, 255, 255, 0.8) 25%,
           rgba(255, 255, 255, 0.8) 75%,
-          rgba(255, 255, 255, 0.6) 100%
+          rgba(255, 255, 255, 0.5) 100%
         );
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
           inset 0 0 1px rgba(255, 255, 255, 0.6);
-        border-radius: 2%;
+        border-radius: 2px;
+
+        @media @SD-screen {
+          width: 60%;
+        }
+
+        &:hover {
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.8) 0%,
+            rgba(255, 255, 255, 0.8) 25%,
+            rgba(255, 255, 255, 0.8) 75%,
+            rgba(255, 255, 255, 0.8) 100%
+          );
+        }
       }
     }
   }
@@ -38,17 +52,50 @@
     padding: 10px;
     background-color: black;
     color: @lightblue;
-    border-bottom: 1px solid @grey;
-    box-shadow: 0 0 40px 40px rgba(0, 0, 0); 
+    box-shadow: 0 0 40px 40px rgba(0, 0, 0);
     text-align: center;
 
     .individual-topic {
-      padding: 10px;
-      border: 1px solid @lightblue;
-      border-radius: 10px;
-      text-align: left;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 30px 20px;
+
+      .topic-text-container {
+        text-align: left;
+        width: 50%;
+      }
+
+      .icon-container {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 20%;
+      }
+
       p {
         color: @lightblue;
+      }
+    }
+
+    @media @SD-screen {
+      .topics-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-content: flex-start;
+
+        .individual-topic {
+          display: flex;
+          flex-direction: column;
+          width: 20%;
+          padding: 0;
+
+          .topic-text-container {
+            width: 100%;
+            text-align: center;
+          }
+        }
       }
     }
   }

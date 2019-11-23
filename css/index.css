@@ -148,7 +148,7 @@ h2 {
   font-size: 3rem;
 }
 h3 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 p {
   color: #0D0D0D;
@@ -177,28 +177,26 @@ nav h2 {
 }
 nav .logo {
   display: flex;
-  justify-content: left;
+  justify-content: center;
 }
 nav .nav-links {
   display: none;
 }
 @media (min-width: 768px) {
   nav {
-    max-width: 100vh;
+    width: 100vw;
     padding: 11px 20px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
   }
   nav h2 {
     font-size: 2rem;
   }
   nav a {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     padding: 5px;
   }
   nav a:visited {
@@ -208,9 +206,9 @@ nav .nav-links {
     color: white;
   }
   nav .nav-links {
-    width: 50%;
+    width: 70%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 footer {
@@ -225,12 +223,11 @@ footer span {
   align-items: center;
 }
 footer span p {
-  font-size: 1rem;
+  font-size: 1.6rem;
   color: #D0E9F2;
 }
 footer span img {
-  height: 20px;
-  object-fit: cover;
+  height: 40px;
 }
 .home header {
   height: 100vh;
@@ -250,9 +247,17 @@ footer span img {
 }
 .home header .container .transparent-box {
   padding: 20px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.8) 25%, rgba(255, 255, 255, 0.8) 75%, rgba(255, 255, 255, 0.6) 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.8) 25%, rgba(255, 255, 255, 0.8) 75%, rgba(255, 255, 255, 0.5) 100%);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
-  border-radius: 2%;
+  border-radius: 2px;
+}
+@media (min-width: 768px) {
+  .home header .container .transparent-box {
+    width: 60%;
+  }
+}
+.home header .container .transparent-box:hover {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 25%, rgba(255, 255, 255, 0.8) 75%, rgba(255, 255, 255, 0.8) 100%);
 }
 .home .exploration {
   max-width: 100%;
@@ -261,16 +266,43 @@ footer span img {
   padding: 10px;
   background-color: black;
   color: #D0E9F2;
-  border-bottom: 1px solid #95AFBF;
   box-shadow: 0 0 40px 40px rgba(0, 0, 0);
   text-align: center;
 }
 .home .exploration .individual-topic {
-  padding: 10px;
-  border: 1px solid #D0E9F2;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 20px;
+}
+.home .exploration .individual-topic .topic-text-container {
   text-align: left;
+  width: 50%;
+}
+.home .exploration .individual-topic .icon-container {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 20%;
 }
 .home .exploration .individual-topic p {
   color: #D0E9F2;
+}
+@media (min-width: 768px) {
+  .home .exploration .topics-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+  }
+  .home .exploration .topics-container .individual-topic {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding: 0;
+  }
+  .home .exploration .topics-container .individual-topic .topic-text-container {
+    width: 100%;
+    text-align: center;
+  }
 }

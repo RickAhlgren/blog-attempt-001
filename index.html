@@ -8,6 +8,13 @@
     <title>the Rick Tastic</title>
 
     <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+      integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN"
+      crossorigin="anonymous"
+    />
+
+    <link
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       rel="stylesheet"
     />
@@ -38,7 +45,7 @@
       <header>
         <div class="container">
           <div class="transparent-box">
-            <h1>Welcome</h1>
+            <center><h1>Welcome</h1></center>
             <br /><br />
             <p>
               You've stumbled upon the website of a simple human just biding his
@@ -46,7 +53,7 @@
               machine and explore the stars for eternity.
             </p>
             <br /><br />
-            <p>Scroll down if you want to know more.</p>
+            <center><p>Scroll down if you want to know more.</p></center>
           </div>
           <!-- this closes the frosted-box div -->
         </div>
@@ -58,38 +65,73 @@
           <h1>Explore</h1>
           <br />
         </div>
+        <!-- this closes the div containing Explore -->
         <div class="topics-container">
           <div class="individual-topic">
-            <h3>(mis)Adventures</h3>
-            <br />
-            <p>
-              Some of my best memories. Life lessons present but not guaranteed.
-            </p>
+            <div class="icon-container">
+              <i class="fas fa-book fa-7x"></i>
+            </div>
+            <div class="topic-text-container">
+              <h3>(mis)Adventures</h3>
+              <br />
+              <p>
+                Life lessons present but not guaranteed.
+              </p>
+            </div>
           </div>
-          <br />
           <!-- this closes the individual-topic div containing (mis)adventures -->
-          <div class="individual-topic">
-            <h3>Work</h3>
-            <br />
-            <p>Some things I've made. Take a look.</p>
-          </div>
           <br />
+
+          <div class="individual-topic">
+            <div class="icon-container">
+              <i class="fas fa-code fa-7x"></i>
+            </div>
+            <div class="topic-text-container">
+              <h3>Work</h3>
+              <br />
+              <p>Things I've made.</p>
+            </div>
+          </div>
           <!-- this closes the individual-topic div containing work -->
-          <div class="individual-topic">
-            <h3>Meditations</h3>
-            <br />
-            <p>Thoughts on life, consciousness, and existence.</p>
-          </div>
           <br />
+
+          <div class="individual-topic">
+            <div class="icon-container">
+              <i class="far fa-comment-dots fa-7x"></i>
+            </div>
+            <div class="topic-text-container">
+              <h3>Meditations</h3>
+              <br />
+              <p>Thoughts on life and existence.</p>
+            </div>
+          </div>
           <!-- this closes the individual-topic div containing meditations -->
+          <br />
+
+          <div class="individual-topic">
+            <div class="icon-container">
+              <i class="fas fa-user-edit fa-7x"></i>
+            </div>
+            <div class="topic-text-container">
+              <h3>Status Updates</h3>
+              <br />
+              <p>
+                What I've been doing
+              </p>
+            </div>
+          </div>
+          <!-- this closes the individual-topic div containing meditations -->
+          <br />
         </div>
         <!-- this closes the topics-container div -->
       </div>
+      <!-- this closes the exploration div -->
     </div>
     <!-- this closes the home div -->
     <footer>
       <span>
         <p>Powered by Disco</p>
+        <img src="img/disco-ball.png" alt="Miniature disco ball" />
       </span>
     </footer>
   </body>
