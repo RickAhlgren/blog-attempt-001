@@ -151,7 +151,6 @@ h3 {
   font-size: 2.2rem;
 }
 p {
-  color: #0D0D0D;
   font-size: 1.8rem;
   line-height: 2.2rem;
 }
@@ -203,6 +202,7 @@ nav .nav-links {
     color: #0D0D0D;
   }
   nav a:hover {
+    background: radial-gradient(closest-side, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0));
     color: white;
   }
   nav .nav-links {
@@ -263,7 +263,6 @@ footer span img {
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 10px;
   background-color: black;
   color: #D0E9F2;
   box-shadow: 0 0 40px 40px rgba(0, 0, 0);
@@ -274,32 +273,49 @@ footer span img {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: 30px 20px;
+  padding: 30px 0;
 }
 .home .exploration .individual-topic .topic-text-container {
   text-align: left;
-  width: 50%;
+  width: 60%;
 }
 .home .exploration .individual-topic .icon-container {
-  display: flex;
-  flex-direction: row-reverse;
-  width: 20%;
-}
-.home .exploration .individual-topic p {
-  color: #D0E9F2;
+  width: 30%;
 }
 @media (min-width: 768px) {
+  .home .exploration .explore-text-container {
+    display: none;
+  }
   .home .exploration .topics-container {
+    margin-top: 50px;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    align-content: flex-start;
+    align-items: flex-start;
   }
   .home .exploration .topics-container .individual-topic {
     display: flex;
     flex-direction: column;
     width: 20%;
     padding: 0;
+  }
+  .home .exploration .topics-container .individual-topic .status {
+    margin-left: 20px;
+  }
+  .home .exploration .topics-container .individual-topic .icon-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  .home .exploration .topics-container .individual-topic a {
+    color: #D0E9F2;
+  }
+  .home .exploration .topics-container .individual-topic a:hover {
+    background: radial-gradient(closest-side, rgba(255, 255, 255, 0.1), black);
+    color: white;
   }
   .home .exploration .topics-container .individual-topic .topic-text-container {
     width: 100%;

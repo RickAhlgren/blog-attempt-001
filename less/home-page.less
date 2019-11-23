@@ -49,7 +49,6 @@
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 10px;
     background-color: black;
     color: @lightblue;
     box-shadow: 0 0 40px 40px rgba(0, 0, 0);
@@ -60,38 +59,59 @@
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      padding: 30px 20px;
+      padding: 30px 0;
 
       .topic-text-container {
         text-align: left;
-        width: 50%;
+        width: 60%;
       }
 
       .icon-container {
-        display: flex;
-        flex-direction: row-reverse;
-        width: 20%;
-      }
-
-      p {
-        color: @lightblue;
+        width: 30%;
       }
     }
 
     
 
     @media @SD-screen {
+      .explore-text-container {
+        display: none;
+      }
+
       .topics-container {
+        margin-top: 50px;
         width: 100%;
         display: flex;
         justify-content: space-around;
-        align-content: flex-start;
+        align-items: flex-start;
 
         .individual-topic {
           display: flex;
           flex-direction: column;
           width: 20%;
           padding: 0;
+
+          .status {
+            margin-left: 20px;
+          }
+
+          .icon-container {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+          }
+
+          a {
+            color: @lightblue;
+
+            &:hover {
+              background: radial-gradient(closest-side, rgba(255, 255, 255, 0.1), black);
+              color: white;
+            }
+          }
 
           .topic-text-container {
             width: 100%;
