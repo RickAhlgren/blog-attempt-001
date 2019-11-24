@@ -146,12 +146,18 @@ h1 {
 }
 h2 {
   font-size: 3rem;
+  font-weight: bold;
 }
 h3 {
   font-size: 2rem;
 }
 h4 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 4rem;
+}
+h5 {
+  font-size: 1.3rem;
 }
 p {
   color: #0D0D0D;
@@ -166,41 +172,50 @@ a active,
 a visited {
   color: #0D0D0D;
 }
+.emphasized-text {
+  font-weight: 900;
+}
 nav {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   margin: 0 auto;
-  padding: 11px 20px 10px;
-  position: absolute;
+  padding: 10px 20px 15px;
+  position: fixed;
   top: 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.7) 25%, rgba(255, 255, 255, 0.7) 75%, rgba(255, 255, 255, 0.5) 100%);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 7;
 }
 nav h2 {
   font-size: 2rem;
 }
-nav .logo {
-  display: flex;
-  justify-content: center;
-}
 nav .nav-links {
   display: none;
+}
+@media (min-width: 500px) {
+  nav {
+    display: flex;
+    align-items: baseline;
+  }
+  nav .nav-links a {
+    font-size: 1.5rem;
+  }
 }
 @media (min-width: 768px) {
   nav {
     width: 100vw;
-    padding: 11px 20px 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
   }
   nav h2 {
     font-size: 2rem;
   }
   nav a {
-    font-size: 1.7rem;
-    padding: 5px;
+    font-size: 2rem;
   }
   nav a:visited {
     color: #0D0D0D;
@@ -208,6 +223,9 @@ nav .nav-links {
   nav a:hover {
     background: radial-gradient(closest-side, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0));
     color: white;
+  }
+  nav .nav-links-mobile {
+    display: none;
   }
   nav .nav-links {
     width: 70%;
@@ -251,15 +269,18 @@ footer span img {
 }
 .home header .container .transparent-box {
   padding: 20px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.8) 25%, rgba(255, 255, 255, 0.8) 75%, rgba(255, 255, 255, 0.6) 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.5) 25%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.2) 100%);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
   border-radius: 3px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 0;
 }
 .home header .container .transparent-box p {
   font-size: 1.6rem;
 }
 .home header .container .transparent-box:hover {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0.9) 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0.6) 75%, rgba(255, 255, 255, 0.6) 100%);
 }
 @media (min-width: 500px) {
   .home header .container .transparent-box {
@@ -366,7 +387,10 @@ footer span img {
 }
 .home .about-me-brief .bio-box {
   padding: 30px 0;
-  border-bottom: 1px solid #95AFBF;
+  border-bottom: 2px solid #95AFBF;
+}
+.home .about-me-brief .bio-box .borderline {
+  border: 1px solid #D0E9F2;
 }
 .home .about-me-brief h2 {
   text-align: center;
@@ -397,30 +421,30 @@ footer span img {
 }
 .home .portfolio-container .project-title {
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
   width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-left: 1px solid #D0E9F2;
-  border-top: 1px solid #D0E9F2;
-  border-right: 1px solid #D0E9F2;
+  border-left: 1px solid #95AFBF;
+  border-top: 1px solid #95AFBF;
+  border-right: 1px solid #95AFBF;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  box-shadow: 0 0 25px rgba(167, 207, 242, 0.3);
+  box-shadow: 0 0 25px rgba(149, 175, 191, 0.2);
 }
 .home .portfolio-container .project-description {
   margin: 0 auto;
   width: 90%;
   padding: 10px;
-  border-left: 1px solid #D0E9F2;
-  border-bottom: 1px solid #D0E9F2;
-  border-right: 1px solid #D0E9F2;
+  border-left: 1px solid #95AFBF;
+  border-bottom: 1px solid #95AFBF;
+  border-right: 1px solid #95AFBF;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  box-shadow: 0 0 25px rgba(167, 207, 242, 0.3);
+  box-shadow: 0 0 25px rgba(149, 175, 191, 0.2);
 }
 .home .portfolio-container .project-description h4 {
   display: none;
@@ -429,13 +453,13 @@ footer span img {
   line-height: 2.5rem;
 }
 .home .portfolio-container .project-image {
-  background-color: #D0E9F2;
+  background-color: #95AFBF;
   box-shadow: none;
 }
 .home .portfolio-container img {
   width: 100%;
   cursor: pointer;
-  border-top: 2px solid #D0E9F2;
+  border-top: 2px solid #95AFBF;
 }
 .home .portfolio-container span {
   width: 100%;
@@ -501,4 +525,28 @@ footer span img {
   .home .portfolio-container .portfolio-piece .project-image {
     width: 40%;
   }
+}
+.home .contact-container .individual-contact-info {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #D0E9F2;
+  border-top: 2px solid #95AFBF;
+}
+.home .contact-container .individual-contact-info .contact-category-title {
+  width: 25%;
+  text-align: right;
+}
+.home .contact-container .individual-contact-info .contact-category-text {
+  width: 65%;
+}
+.home .contact-container .individual-contact-info .contact-category-text span {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10%;
+}
+.home .contact-container .individual-contact-info .contact-category-text a,
+.home .contact-container .individual-contact-info .contact-category-text p {
+  font-size: 1.3rem;
 }

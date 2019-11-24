@@ -19,14 +19,17 @@
         padding: 20px;
         background: linear-gradient(
           90deg,
-          rgba(255, 255, 255, 0.6) 0%,
-          rgba(255, 255, 255, 0.8) 25%,
-          rgba(255, 255, 255, 0.8) 75%,
-          rgba(255, 255, 255, 0.6) 100%
+          rgba(255, 255, 255, 0.2) 0%,
+          rgba(255, 255, 255, 0.5) 25%,
+          rgba(255, 255, 255, 0.5) 75%,
+          rgba(255, 255, 255, 0.2) 100%
         );
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
           inset 0 0 1px rgba(255, 255, 255, 0.6);
         border-radius: 3px;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        z-index: 0;
 
         p {
           font-size: 1.6rem;
@@ -35,10 +38,10 @@
         &:hover {
           background: linear-gradient(
             90deg,
-            rgba(255, 255, 255, 0.9) 0%,
-            rgba(255, 255, 255, 0.9) 25%,
-            rgba(255, 255, 255, 0.9) 75%,
-            rgba(255, 255, 255, 0.9) 100%
+            rgba(255, 255, 255, 0.6) 0%,
+            rgba(255, 255, 255, 0.6) 25%,
+            rgba(255, 255, 255, 0.6) 75%,
+            rgba(255, 255, 255, 0.6) 100%
           );
         }
 
@@ -98,7 +101,7 @@
         }
       }
     }
-
+// Here is the code for the explore section at 500p and up
     @media @tablet {
       .topics-container {
         display: flex;
@@ -133,6 +136,7 @@
       }
     }
 
+    // Here is the code for the explore section at 1080p and up
     @media @HD-display {
       .explore-text-container {
         display: none;
@@ -160,8 +164,10 @@
     }
   }
 
+  // Here is the code for the About Me section
   .about-me-brief {
     margin-top: 80px;
+
 
     .about-container {
       width: 90%;
@@ -170,7 +176,11 @@
 
     .bio-box {
       padding: 30px 0;
-      border-bottom: 1px solid @grey;
+      border-bottom: 2px solid @grey;
+
+      .borderline {
+        border: 1px solid @lightblue;
+      }
     }
 
 
@@ -210,31 +220,33 @@
 
     .project-title {
       margin: 0 auto;
-      padding: 10px;
+      padding: 20px;
       width: 90%;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       text-align: center;
-      border-left: 1px solid @lightblue;
-      border-top: 1px solid @lightblue;
-      border-right: 1px solid @lightblue;
+      border-left: 1px solid @grey;
+      border-top: 1px solid @grey;
+      border-right: 1px solid @grey;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
-      box-shadow: 0 0 25px rgba(rgb(167, 207, 242), 0.3);
+      box-shadow: 0 0 25px rgba(rgb(149, 175, 191), 0.2);
+
+
     }
 
     .project-description {
       margin: 0 auto;
       width: 90%;
       padding: 10px;
-      border-left: 1px solid @lightblue;
-      border-bottom: 1px solid @lightblue;
-      border-right: 1px solid @lightblue;
+      border-left: 1px solid @grey;
+      border-bottom: 1px solid @grey;
+      border-right: 1px solid @grey;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
-      box-shadow: 0 0 25px rgba(rgb(167, 207, 242), 0.3);
+      box-shadow: 0 0 25px rgba(rgb(149, 175, 191), 0.2);
 
       h4 {
         display: none;
@@ -245,14 +257,14 @@
     }
 
     .project-image {
-      background-color: @lightblue;
+      background-color: @grey;
       box-shadow: none;
     }
 
     img {
       width: 100%;
       cursor: pointer;
-      border-top: 2px solid @lightblue;
+      border-top: 2px solid @grey;
     }
 
     span {
@@ -328,16 +340,36 @@
         .project-image {
           width: 40%;
         }
+      }
+    }
+  }
 
-        // h4 {
-        //   font-size: 4rem;
-        //   line-height: 6rem;
-        // }
+  // Here is the code for the contact info at the bottom of the page
+  .contact-container {
+    .individual-contact-info {
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: @lightblue;
+      border-top: 2px solid @grey;
 
-        // p {
-        //   font-size: 2.5rem;
-        //   line-height: 3.5rem;
-        // }
+      .contact-category-title {
+        width: 25%;
+        text-align: right;
+      }
+
+      .contact-category-text {
+        span {
+          display: flex;
+          justify-content: space-between;
+          padding-right: 10%;
+        }
+        width: 65%;
+
+        a, p {
+          font-size: 1.3rem;
+        }
       }
     }
   }
