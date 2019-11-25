@@ -66,7 +66,7 @@
     flex-direction: column;
     background-color: black;
     color: @lightblue;
-    box-shadow: 0 0 40px 40px rgba(0, 0, 0);
+    box-shadow: 0 -20px 20px 0 rgba(0, 0, 0);
     text-align: center;
 
     .individual-topic {
@@ -138,10 +138,6 @@
 
     // Here is the code for the explore section at 1080p and up
     @media @HD-display {
-      .explore-text-container {
-        display: none;
-      }
-
       .topics-container {
         margin: 50px 0 50px;
         width: 100%;
@@ -166,7 +162,8 @@
 
   // Here is the code for the About Me section
   .about-me-brief {
-    margin-top: 80px;
+    padding-top: 50px;
+    background: @lightblue;
 
     .bio-box {
       padding: 10px 10px;
@@ -178,6 +175,7 @@
 
     h2 {
       text-align: center;
+      padding-bottom: 40px;
     }
 
     i {
@@ -226,12 +224,12 @@
     img {
       width: 100%;
       cursor: pointer;
-      border-top: 1px solid @lightblue;
+      border-top: 1px solid rgb(233, 233, 233);
     }
 
     span {
       width: 100%;
-      padding: 20px 0;
+      padding: 10px 0 20px;
       display: flex;
       justify-content: space-around;
 
@@ -245,7 +243,6 @@
 
     // Here is the tablet (500px+) media query for the portfolio section
     @media @tablet {
-
       .portfolio-piece {
         margin-bottom: 80px;
 
