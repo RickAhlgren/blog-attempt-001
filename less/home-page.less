@@ -78,7 +78,7 @@
 
       .topic-text-container {
         text-align: left;
-        width: 60%;
+        width: 65%;
         p {
           color: @lightblue;
         }
@@ -101,7 +101,7 @@
         }
       }
     }
-// Here is the code for the explore section at 500p and up
+    // Here is the code for the explore section at 500p and up
     @media @tablet {
       .topics-container {
         display: flex;
@@ -168,21 +168,13 @@
   .about-me-brief {
     margin-top: 80px;
 
-
-    .about-container {
-      width: 90%;
-      margin: 0 auto;
-    }
-
     .bio-box {
-      padding: 30px 0;
-      border-bottom: 2px solid @grey;
-
-      .borderline {
-        border: 1px solid @lightblue;
+      padding: 10px 10px;
+      border-bottom: 1px solid @grey;
+      p {
+        line-height: 2.5rem;
       }
     }
-
 
     h2 {
       text-align: center;
@@ -211,60 +203,30 @@
 
   // Here is the code for the portfolio section containing recent work
   .portfolio-container {
-    margin-top: 100px;
+    margin-top: 50px;
 
     .recent-work-title {
       text-align: center;
-      margin: 50px 0;
-    }
-
-    .project-title {
-      margin: 0 auto;
-      padding: 20px;
-      width: 90%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      border-left: 1px solid @grey;
-      border-top: 1px solid @grey;
-      border-right: 1px solid @grey;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      box-shadow: 0 0 25px rgba(rgb(149, 175, 191), 0.2);
-
-
+      margin-bottom: 50px;
     }
 
     .project-description {
-      margin: 0 auto;
-      width: 90%;
       padding: 10px;
-      border-left: 1px solid @grey;
-      border-bottom: 1px solid @grey;
-      border-right: 1px solid @grey;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-      box-shadow: 0 0 25px rgba(rgb(149, 175, 191), 0.2);
 
       h4 {
-        display: none;
+        text-align: center;
+        padding-bottom: 10px;
       }
+
       p {
         line-height: 2.5rem;
       }
     }
 
-    .project-image {
-      background-color: @grey;
-      box-shadow: none;
-    }
-
     img {
       width: 100%;
       cursor: pointer;
-      border-top: 2px solid @grey;
+      border-top: 1px solid @lightblue;
     }
 
     span {
@@ -281,24 +243,14 @@
       }
     }
 
+    // Here is the tablet (500px+) media query for the portfolio section
     @media @tablet {
-      width: 90%;
-      margin: 0 auto;
 
       .portfolio-piece {
-        display: flex;
         margin-bottom: 80px;
 
-        .project-title {
-          display: none;
-        }
-
         .project-description {
-          background: none;
-          border: none;
-          box-shadow: none;
           h4 {
-            display: block;
             padding-bottom: 10px;
             margin-bottom: 10px;
             border-bottom: 1px solid @grey;
@@ -307,26 +259,25 @@
 
         .project-image {
           width: 100%;
-          box-shadow: none;
-          background: none;
-          border: none;
-          img {
-            border: 2px solid @lightblue;
-            border-radius: 5px;
-          }
         }
+      }
+    }
 
-        span {
-          padding: 20px 0;
-        }
+    @media @SD-display {
+      .portfolio-piece {
+        display: flex;
+      }
+
+      .piece-one {
+        flex-direction: row;
       }
 
       .piece-two {
-        display: flex;
         flex-direction: row-reverse;
       }
     }
 
+    // Here is the HD resolution (1080px+) media query for the portfolio section
     @media @HD-display {
       width: 70%;
       margin: 125px auto;
@@ -367,7 +318,8 @@
         }
         width: 65%;
 
-        a, p {
+        a,
+        p {
           font-size: 1.3rem;
         }
       }

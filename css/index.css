@@ -175,6 +175,9 @@ a visited {
 .emphasized-text {
   font-weight: 900;
 }
+li {
+  font-size: 1.8rem;
+}
 nav {
   width: 100%;
   display: flex;
@@ -205,7 +208,7 @@ nav .nav-links {
     font-size: 1.5rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 720px) {
   nav {
     width: 100vw;
     display: flex;
@@ -246,7 +249,7 @@ footer span {
 }
 footer span p {
   font-size: 1.6rem;
-  color: #D0E9F2;
+  color: white;
 }
 footer span img {
   height: 40px;
@@ -313,7 +316,7 @@ footer span img {
 }
 .home .exploration .individual-topic .topic-text-container {
   text-align: left;
-  width: 60%;
+  width: 65%;
 }
 .home .exploration .individual-topic .topic-text-container p {
   color: #D0E9F2;
@@ -381,16 +384,12 @@ footer span img {
 .home .about-me-brief {
   margin-top: 80px;
 }
-.home .about-me-brief .about-container {
-  width: 90%;
-  margin: 0 auto;
-}
 .home .about-me-brief .bio-box {
-  padding: 30px 0;
-  border-bottom: 2px solid #95AFBF;
+  padding: 10px 10px;
+  border-bottom: 1px solid #95AFBF;
 }
-.home .about-me-brief .bio-box .borderline {
-  border: 1px solid #D0E9F2;
+.home .about-me-brief .bio-box p {
+  line-height: 2.5rem;
 }
 .home .about-me-brief h2 {
   text-align: center;
@@ -399,7 +398,7 @@ footer span img {
   text-align: center;
   width: 30px;
 }
-@media (min-width: 768px) {
+@media (min-width: 720px) {
   .home .about-me-brief .about-container {
     display: flex;
     justify-content: space-around;
@@ -413,53 +412,26 @@ footer span img {
   }
 }
 .home .portfolio-container {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .home .portfolio-container .recent-work-title {
   text-align: center;
-  margin: 50px 0;
-}
-.home .portfolio-container .project-title {
-  margin: 0 auto;
-  padding: 20px;
-  width: 90%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-left: 1px solid #95AFBF;
-  border-top: 1px solid #95AFBF;
-  border-right: 1px solid #95AFBF;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  box-shadow: 0 0 25px rgba(149, 175, 191, 0.2);
+  margin-bottom: 50px;
 }
 .home .portfolio-container .project-description {
-  margin: 0 auto;
-  width: 90%;
   padding: 10px;
-  border-left: 1px solid #95AFBF;
-  border-bottom: 1px solid #95AFBF;
-  border-right: 1px solid #95AFBF;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  box-shadow: 0 0 25px rgba(149, 175, 191, 0.2);
 }
 .home .portfolio-container .project-description h4 {
-  display: none;
+  text-align: center;
+  padding-bottom: 10px;
 }
 .home .portfolio-container .project-description p {
   line-height: 2.5rem;
 }
-.home .portfolio-container .project-image {
-  background-color: #95AFBF;
-  box-shadow: none;
-}
 .home .portfolio-container img {
   width: 100%;
   cursor: pointer;
-  border-top: 2px solid #95AFBF;
+  border-top: 1px solid #D0E9F2;
 }
 .home .portfolio-container span {
   width: 100%;
@@ -474,43 +446,26 @@ footer span img {
   color: #95AFBF;
 }
 @media (min-width: 500px) {
-  .home .portfolio-container {
-    width: 90%;
-    margin: 0 auto;
-  }
   .home .portfolio-container .portfolio-piece {
-    display: flex;
     margin-bottom: 80px;
   }
-  .home .portfolio-container .portfolio-piece .project-title {
-    display: none;
-  }
-  .home .portfolio-container .portfolio-piece .project-description {
-    background: none;
-    border: none;
-    box-shadow: none;
-  }
   .home .portfolio-container .portfolio-piece .project-description h4 {
-    display: block;
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: 1px solid #95AFBF;
   }
   .home .portfolio-container .portfolio-piece .project-image {
     width: 100%;
-    box-shadow: none;
-    background: none;
-    border: none;
   }
-  .home .portfolio-container .portfolio-piece .project-image img {
-    border: 2px solid #D0E9F2;
-    border-radius: 5px;
+}
+@media (min-width: 720px) {
+  .home .portfolio-container .portfolio-piece {
+    display: flex;
   }
-  .home .portfolio-container .portfolio-piece span {
-    padding: 20px 0;
+  .home .portfolio-container .piece-one {
+    flex-direction: row;
   }
   .home .portfolio-container .piece-two {
-    display: flex;
     flex-direction: row-reverse;
   }
 }
